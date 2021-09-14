@@ -58,6 +58,8 @@ function App() {
         values={formValues}
       />
 
+      {error && <h2 className="error-text">{error}</h2>}
+
       {
         teamMember.map(member => {
           return (
