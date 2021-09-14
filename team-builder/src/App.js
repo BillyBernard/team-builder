@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Form from "./components/Form";
+
+const memberList = [
+  {memberName: 'Billy', memberEmail: 'billy@google.com', memberRole: 'President'}
+];
+
+const initialFormValues = {
+  memberName: '',
+  memberEmail: '',
+  memberRole: '',
+}
+
 
 function App() {
+  const [teamMember, setTeamMember] = useState({})
+
+  const [formValues, setFormValues] = useState(initialFormValues)
+
+  const updateForm = (inputName, inputValue) => {
+    
+  }
+
+  const submitForm = () => {
+    
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form
+        update={updateForm}
+        submit={submitForm}
+        values={formValues}
+      />
     </div>
   );
 }
