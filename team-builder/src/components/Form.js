@@ -20,10 +20,10 @@ return (
         <label>Member Name
           <input
             type="text"
-            name="member name"
+            name="name"
             placeholder="type a member name"
             onChange={onChange}
-            value={values.username}
+            value={values.name}
             />
         </label>
 
